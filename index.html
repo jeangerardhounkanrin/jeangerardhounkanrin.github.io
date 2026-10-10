@@ -78,16 +78,54 @@ h2{font:700 clamp(28px,4vw,40px)/1.1 var(--d);letter-spacing:-.02em;margin:0 0 1
 .contact .big a{text-decoration-color:var(--blue);text-decoration-thickness:4px;text-underline-offset:6px}
 footer{padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
 @media (prefers-reduced-motion:reduce){.bar,.ms{animation:none}html{scroll-behavior:auto}}
+.sub2{font:700 24px var(--d);margin:44px 0 18px}
+.bm{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:760px){.bm{grid-template-columns:1fr}}
+.bm p{margin:0 0 12px;color:var(--mute)}.bm p:last-child{margin:0}
+.cc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:40px 24px;text-align:center;margin-top:28px}
+.cc p{color:var(--mute);margin:0 0 28px}
+.cbtn{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+.cbtn .btn{display:inline-flex;align-items:center;gap:10px;border-color:var(--line);background:var(--bg);word-break:break-all}
+.cbtn .btn:hover{border-color:var(--blue)}
+.cbtn svg{width:20px;height:20px;flex:none}
+nav ul{gap:18px}
+.hero h1{max-width:none}
+.role{display:block;color:var(--blue)}
+.avail{display:flex;align-items:center;gap:12px;color:var(--blue);font-weight:600;margin:0 0 20px}
+.avail::before{content:"";width:36px;height:2px;background:var(--blue)}
+.h2b{margin-top:64px}
+.trio{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;margin-top:24px}
+.skill p{margin:0;color:var(--mute);font-size:16px}
+.cf{max-width:560px;margin:0 auto 32px;text-align:left;display:grid;gap:8px}
+.cf label{font-weight:600;font-size:15px;margin-top:8px}
+.cf input,.cf textarea{width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit}
+.cf input:focus,.cf textarea:focus{outline:3px solid var(--blue);outline-offset:1px;border-color:var(--blue)}
+.cf .btn{margin-top:14px;cursor:pointer;font:inherit;font-weight:600;justify-self:start}
+.ou{margin:0 0 16px!important;font-size:15px}
+.merci{background:var(--blue-soft);color:var(--ink)!important;border-radius:10px;padding:12px 16px;max-width:560px;margin:0 auto 24px!important}
+.cc p[hidden]{display:none}
+.grp{font:700 24px var(--d);margin:44px 0 18px}
+.grp:first-of-type{margin-top:8px}
+.bd{display:inline-block;padding:2px 10px;border-radius:99px;font-size:13px;font-weight:600;margin-right:6px;color:var(--ink)}
+.bd.pro{background:var(--blue-soft)}
+.bd.aca{border:1.5px solid var(--amber)}
+.bd.perso{border:1.5px solid var(--line);background:var(--bg)}
+.clock{border-bottom:1px solid var(--line);font-size:14px;color:var(--mute);padding:6px 0;font-variant-numeric:tabular-nums}
+.clock .cw{max-width:1040px;margin:0 auto;padding:0 24px}
+.tl ul{margin:10px 0 0;padding-left:18px;color:var(--mute)}.tl li li{padding:0 0 4px;position:static}
+.tl li li::before{content:none}
+.tl p.co{color:var(--ink);font-weight:600}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>Jean-Gérard Hounkanrin</b>
-<ul><li><a href="#apropos">À propos</a></li><li><a href="#competences">Compétences</a></li><li><a href="#projets">Projets</a></li><li><a href="#parcours">Parcours</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+<nav><div class="clock"><div class="cw"><span id="clock"></span></div></div><div class="wrap"><b>Jean-Gérard Hounkanrin</b>
+<ul><li><a href="#apropos">À propos</a></li><li><a href="#competences">Compétences</a></li><li><a href="#projets">Projets</a></li><li><a href="#experiences">Expériences</a></li><li><a href="#bilan">Bilan &amp; Motivation</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
 
 <main>
 <header class="hero"><div class="wrap">
-<h1>Je pilote les projets SI de la demande au déploiement.</h1>
-<p class="lead">Chef de projet SI, diplômé d’un Master Expert en informatique et systèmes d’information. Je fais le lien entre les métiers, les équipes techniques et les délais.</p>
+<p class="avail">Disponible · Île-de-France · Oct. 2026</p>
+<h1>Jean-Gérard Hounkanrin<span class="role">Chef de projet SI</span></h1>
+<p class="lead">Spécialisé en SI bancaires et applicatifs : pilotage de projets, support de production et coordination entre métiers et IT. Plus de 6 ans d’expérience chez UBA Bank, NSIA Banque et CFAO Group.</p>
 <div class="btns"><a class="btn main" href="#projets">Voir mes projets</a><a class="btn" href="#contact">Me contacter</a></div>
 
 <div class="gantt" role="img" aria-label="Exemple de planning de projet SI en cinq phases sur douze semaines">
@@ -103,49 +141,127 @@ footer{padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid
 </div>
 </div></header>
 
-<section id="apropos"><div class="wrap about">
-<div><h2>À propos</h2>
-<p>Je suis Jean-Gérard Hounkanrin, tout juste diplômé(e) d’un Master Expert en informatique et systèmes d’information à [École / Université]. Ma formation m’a donné une base technique solide (architecture, données, sécurité) et une vision de gestion de projet de bout en bout.</p>
-<p>Je cherche mon premier poste de chef de projet SI, dans une équipe où je peux coordonner, structurer et livrer des projets qui servent vraiment les utilisateurs.</p></div>
-<ul class="facts"><li><b>Diplôme</b>Master Expert informatique et systèmes d’information, [année]</li><li><b>Poste visé</b>Chef de projet SI, [CDI / alternance]</li><li><b>Mobilité</b>[Ville / Île-de-France / télétravail]</li><li><b>Langues</b>Français, anglais [niveau]</li></ul>
+<section id="apropos"><div class="wrap">
+<h2>Qui suis-je ?</h2>
+<div class="about" style="margin-top:28px">
+<div><p>Chef de projet IT, je termine un <b>Master Expert en informatique et systèmes d’information (MEISI)</b> à l’EPSI, après plus de 6 ans dans les SI bancaires et applicatifs.</p>
+<p>J’ai débuté au support, piloté des projets IT et digitaux chez <b>UBA Bank</b>, assuré la production de <b>FLEXCUBE</b> pour 3 filiales de <b>NSIA Banque</b>, puis conduit des projets RSE, IAM et juridique en alternance chez <b>CFAO Group</b>.</p></div>
+<ul class="facts"><li><b>Formation</b>Master Expert informatique et SI, EPSI, 2024 – 2026</li><li><b>Poste visé</b>Chef de projet SI</li><li><b>Localisation</b>Île-de-France</li><li><b>Langues</b>Français courant, anglais professionnel</li></ul>
+</div>
+<h2 class="h2b">Ce que je fais</h2>
+<div class="trio">
+<div class="skill"><h3>Je pilote des projets IT</h3><p>Planification, suivi des livrables, comités de suivi, recette et mise en production, en mode Agile ou cycle en V.</p></div>
+<div class="skill"><h3>Je coordonne les parties prenantes</h3><p>Métiers, équipes techniques et prestataires : j’anime les ateliers, je cadre les besoins et j’accompagne le changement.</p></div>
+<div class="skill"><h3>Je garde les applications fiables</h3><p>Support N1 à N3, incidents, SLA et maintien en conditions opérationnelles sur des applications bancaires critiques.</p></div>
+</div>
+<h2 class="h2b">Ce que j’apporte à l’entreprise</h2>
+<div class="trio">
+<div class="skill"><h3>Une double culture projet et production</h3><p>Je connais le build comme le run : je pense la mise en production dès le cadrage.</p></div>
+<div class="skill"><h3>Des résultats mesurables</h3><p>Disponibilité supérieure à 98 %, 25 % d’incidents récurrents en moins, 90 % des tickets traités dans les délais.</p></div>
+<div class="skill"><h3>Un lien clair entre métiers et IT</h3><p>Reporting lisible, documentation, plus de 50 utilisateurs formés lors des déploiements.</p></div>
+<div class="skill"><h3>La connaissance des SI financiers</h3><p>Core Banking, contraintes réglementaires et environnements multi-filiales, multi-intervenants.</p></div>
+</div>
 </div></section>
 
 <section id="competences"><div class="wrap">
-<h2>Compétences</h2><p class="sub">Trois domaines qui couvrent la vie d’un projet SI.</p>
+<h2>Compétences</h2><p class="sub">Du pilotage de projet au support de production : je couvre toute la vie d’une application.</p>
 <div class="skills">
-<div class="skill"><h3>Pilotage de projet</h3><ul class="tags"><li>Cadrage et expression de besoin</li><li>Planning et budget</li><li>Gestion des risques</li><li>Agile / Scrum</li><li>Cycle en V</li><li>Comités de pilotage</li><li>Recette et conduite du changement</li></ul></div>
-<div class="skill"><h3>Systèmes d’information</h3><ul class="tags"><li>Urbanisation du SI</li><li>Cahier des charges</li><li>UML / BPMN</li><li>ERP / CRM</li><li>ITIL</li><li>Gouvernance et RGPD</li><li>Cybersécurité</li></ul></div>
-<div class="skill"><h3>Technique et outils</h3><ul class="tags"><li>SQL et bases de données</li><li>Python</li><li>Power BI</li><li>Cloud [Azure / AWS]</li><li>Jira, Confluence</li><li>MS Project</li><li>Git</li></ul></div>
+<div class="skill"><h3>Build et delivery IT</h3><ul class="tags"><li>Projets IT en mode Agile</li><li>Transformation digitale</li><li>Mises en production</li><li>Gestion du changement</li><li>Pilotage d’équipes et de prestataires</li><li>Recette et formation des utilisateurs</li></ul></div>
+<div class="skill"><h3>Run et service management</h3><ul class="tags"><li>Support applicatif N1 à N3</li><li>Incidents, problèmes, changements</li><li>MCO</li><li>Suivi des SLA</li><li>Documentation technique</li><li>Amélioration continue</li></ul></div>
+<div class="skill"><h3>Outils et technologies</h3><ul class="tags"><li>ServiceNow</li><li>Jira</li><li>Microsoft 365</li><li>Oracle</li><li>SQL</li><li>FLEXCUBE</li><li>Enablon</li><li>ITSM</li></ul></div>
 </div></div></section>
 
 <section id="projets"><div class="wrap">
-<h2>Projets</h2><p class="sub">Chaque projet suit la même logique : le contexte, mon rôle, la méthode, le résultat.</p>
+<h2>Projets</h2><p class="sub">Mes projets, classés en trois catégories : professionnels, académiques et personnels.</p>
 
-<article class="proj"><div><h3>[Nom du projet 1]</h3><p class="meta">Projet de Master · [durée] · équipe de [n] personnes</p><ul class="tags"><li>Scrum</li><li>Jira</li><li>[Techno]</li></ul></div>
-<dl><dt>Contexte</dt><dd>[Décrivez le besoin : quelle organisation, quel problème à résoudre.]</dd><dt>Mon rôle</dt><dd>Chef de projet : cadrage, planning, animation des sprints, suivi des risques.</dd><dt>Résultat</dt><dd><div class="res"><span>[−30 % de temps de traitement]</span><span>[Livré dans les délais]</span></div></dd></dl></article>
+<h3 class="grp">Projets professionnels</h3>
+<article class="proj"><div><h3>Support du Core Banking FLEXCUBE</h3><p class="meta"><span class="bd pro">Pro</span> NSIA Banque · Bénin, Togo, Sénégal · 2023 – 2024</p><ul class="tags"><li>FLEXCUBE</li><li>Oracle</li><li>SQL</li><li>ITSM</li></ul></div>
+<dl><dt>Contexte</dt><dd>Exploitation en production du système bancaire central de 3 filiales.</dd><dt>Mon rôle</dt><dd>Administration, support N2/N3, mises en production, exécution des traitements EOD/EOM/EOY, pilotage d’une équipe de 6 collaborateurs.</dd><dt>Résultat</dt><dd><div class="res"><span>Disponibilité supérieure à 98 %</span><span>25 % d’incidents récurrents en moins</span></div></dd></dl></article>
 
-<article class="proj"><div><h3>[Nom du projet 2]</h3><p class="meta">Stage chez [Entreprise] · [durée]</p><ul class="tags"><li>Cycle en V</li><li>MS Project</li><li>[Techno]</li></ul></div>
-<dl><dt>Contexte</dt><dd>[Migration, refonte, déploiement d’un outil : précisez le périmètre.]</dd><dt>Mon rôle</dt><dd>[Assistant chef de projet : rédaction des spécifications, plan de tests, reporting hebdomadaire.]</dd><dt>Résultat</dt><dd><div class="res"><span>[n utilisateurs formés]</span><span>[Budget respecté]</span></div></dd></dl></article>
+<article class="proj"><div><h3>Reporting RSE sur Enablon</h3><p class="meta"><span class="bd pro">Pro</span> CFAO Group · 2025 – 2026</p><ul class="tags"><li>Enablon</li><li>Reporting</li><li>Données</li></ul></div>
+<dl><dt>Contexte</dt><dd>Suivi des indicateurs RSE, sociaux, sécurité et neutralité carbone.</dd><dt>Mon rôle</dt><dd>Administration fonctionnelle, création d’indicateurs, gestion des campagnes de collecte, accompagnement des contributeurs, consolidation des données.</dd><dt>Résultat</dt><dd><div class="res"><span>Import des plans d’action d’audit automatisé</span></div></dd></dl></article>
 
-<article class="proj"><div><h3>[Nom du projet 3]</h3><p class="meta">Mémoire ou projet personnel · [année]</p><ul class="tags"><li>Power BI</li><li>SQL</li><li>[Techno]</li></ul></div>
-<dl><dt>Contexte</dt><dd>[Un tableau de bord, une étude d’urbanisation ou un audit SI.]</dd><dt>Mon rôle</dt><dd>[Analyse du besoin, modélisation, conception de la solution.]</dd><dt>Résultat</dt><dd><div class="res"><span>[Indicateur clé]</span></div></dd></dl></article>
+<article class="proj"><div><h3>Industrialisation de la fonction juridique</h3><p class="meta"><span class="bd pro">Pro</span> CFAO Group · 2025 – 2026</p><ul class="tags"><li>SWOT</li><li>RACI</li><li>Kick-off</li></ul></div>
+<dl><dt>Contexte</dt><dd>Choix et lancement d’une solution pour outiller la fonction juridique.</dd><dt>Mon rôle</dt><dd>Soutenances des éditeurs, analyse des risques, matrices SWOT et RACI, planning fonctionnel, préparation du kick-off.</dd><dt>Résultat</dt><dd><div class="res"><span>Projet cadré et lancé</span></div></dd></dl></article>
+
+<article class="proj"><div><h3>Projet IAM : gestion des identités et des accès</h3><p class="meta"><span class="bd pro">Pro</span> CFAO Group · 2025 – 2026</p><ul class="tags"><li>IAM</li><li>Recette</li><li>Formation</li></ul></div>
+<dl><dt>Contexte</dt><dd>Mise en place d’une solution de gestion des identités et des accès.</dd><dt>Mon rôle</dt><dd>Tests fonctionnels, validation des livrables, formation des utilisateurs.</dd><dt>Résultat</dt><dd><div class="res"><span>Recette validée</span></div></dd></dl></article>
+<h3 class="grp">Projets académiques</h3>
+<article class="proj"><div><h3>Atelier PRA / PCA</h3><p class="meta"><span class="bd aca">Académique</span> Master EPSI · 2024 – 2026</p><ul class="tags"><li>PRA</li><li>PCA</li><li>Continuité d’activité</li></ul></div>
+<dl><dt>Contexte</dt><dd>Atelier du Master sur le plan de reprise (PRA) et le plan de continuité d’activité (PCA).</dd><dt>Mon rôle</dt><dd>[À compléter : votre rôle et ce que vous avez réalisé]</dd></dl></article>
+<article class="proj"><div><h3>Atelier Ansible</h3><p class="meta"><span class="bd aca">Académique</span> Master EPSI · 2026</p><ul class="tags"><li>Ansible</li><li>Automatisation</li><li>Infrastructure</li></ul></div>
+<dl><dt>Contexte</dt><dd>Atelier du Master sur l’automatisation de la configuration d’infrastructures avec Ansible.</dd><dt>Mon rôle</dt><dd>[À compléter : votre rôle et ce que vous avez réalisé]</dd></dl></article>
+<article class="proj"><div><h3>Atelier d’automatisation de tests</h3><p class="meta"><span class="bd aca">Académique</span> Master EPSI · 2026</p><ul class="tags"><li>Tests automatisés</li><li>API</li><li>Python</li></ul></div>
+<dl><dt>Contexte</dt><dd>Atelier du Master sur l’automatisation des tests d’une application.</dd><dt>Mon rôle</dt><dd>[À compléter : votre rôle et ce que vous avez réalisé]</dd></dl></article>
+
+<h3 class="grp">Projets personnels</h3>
+<article class="proj"><div><h3>Mon portfolio en ligne</h3><p class="meta"><span class="bd perso">Personnel</span> 2026</p><ul class="tags"><li>HTML / CSS</li><li>GitHub Pages</li><li>Formulaire de contact</li></ul></div>
+<dl><dt>Contexte</dt><dd>Créer ma vitrine professionnelle pour présenter mon profil de chef de projet SI.</dd><dt>Mon rôle</dt><dd>Conception du contenu, mise en ligne sur GitHub Pages et mise en place d’un formulaire de contact.</dd><dt>Résultat</dt><dd><div class="res"><span>Site en ligne et gratuit</span></div></dd></dl></article>
 </div></section>
 
-<section id="parcours"><div class="wrap">
-<h2>Parcours</h2><p class="sub">Formation et expériences, du plus récent au plus ancien.</p>
+<section id="experiences"><div class="wrap">
+<h2>Expériences</h2><p class="sub">Mon parcours professionnel, du plus récent au plus ancien.</p>
 <ul class="tl">
-<li><time>[2024 – 2026]</time><h3>Master Expert informatique et systèmes d’information</h3><p>[École / Université] · Spécialité [x]. Mémoire sur [sujet].</p></li>
-<li><time>[2025 – 2026]</time><h3>Alternance ou stage : [Poste] chez [Entreprise]</h3><p>[Une phrase sur vos missions et vos résultats.]</p></li>
-<li><time>[2021 – 2024]</time><h3>Licence / Bachelor [intitulé]</h3><p>[École / Université]</p></li>
-<li><time>[Année]</time><h3>Certifications</h3><p>[PMP / PRINCE2 / Scrum Master / ITIL 4 / TOEIC : à compléter]</p></li>
-</ul></div></section>
+<li><time>Sept 2025 – Sept 2026</time><h3>Assistant chef de projet applicatif MOE, en alternance</h3><p class="co">CFAO Group</p>
+<ul><li>Administration et support fonctionnel d’Enablon : utilisateurs, indicateurs, campagnes de collecte.</li><li>Automatisation de l’import des plans d’action d’audit ; recette du projet de gestion des identités.</li><li>Industrialisation de la fonction juridique : soutenances des éditeurs, planning, kick-off, matrices SWOT et RACI.</li><li>Refonte du site institutionnel, cadrage du site événementiel, animation d’ateliers avec les métiers.</li></ul></li>
+<li><time>Janv 2024 – Sept 2024</time><h3>Core Banking Production Support Engineer</h3><p class="co">NSIA Banque · Bénin, Togo, Sénégal</p>
+<ul><li>Administration et support de FLEXCUBE en production pour 3 filiales.</li><li>10 à 30 tickets N2/N3 par mois, plus de 10 KPI suivis, disponibilité supérieure à 98 %.</li><li>Plus de 25 % d’incidents récurrents en moins, 2 à 4 mises en production par mois.</li><li>Plus de 3 projets FLEXCUBE gérés, équipe de 6 collaborateurs pilotée.</li></ul></li>
+<li><time>Sept 2023 – Déc 2023</time><h3>Gestionnaire applicatif bancaire</h3><p class="co">NSIA Banque · Bénin, Togo, Sénégal</p>
+<ul><li>Pilotage et coordination des évolutions applicatives FLEXCUBE.</li><li>Analyse des incidents et des demandes métiers, suivi des corrections, des SLA et de la qualité de service.</li></ul></li>
+<li><time>Mars 2020 – Sept 2023</time><h3>Assistant chef de projet IT et digital</h3><p class="co">UBA Bank</p>
+<ul><li>Pilotage de 8 projets IT et digitaux, de la planification au déploiement.</li><li>Coordination de 6 à 10 parties prenantes par projet : métiers, équipes techniques, prestataires.</li><li>Analyse des besoins, livrables, reporting d’avancement, accompagnement au changement.</li><li>Plus de 50 utilisateurs formés lors des évolutions et déploiements.</li></ul></li>
+<li><time>Mai 2015 – Fév 2020</time><h3>Senior IT et digital support</h3><p class="co">UBA Bank</p>
+<ul><li>30 à 100 tickets par mois (N1/N2), 90 % traités dans les délais.</li><li>Support de 5 à 10 applications avec 95 % de résolution ; plus de 20 % d’incidents récurrents en moins.</li><li>Plus de 20 procédures rédigées, parc de plus de 200 ordinateurs et plus de 5 serveurs supervisés.</li></ul></li>
+</ul>
+<h3 class="sub2">Formation</h3>
+<ul class="tl">
+<li><time>2024 – 2026</time><h3>Master Expert en informatique et systèmes d’information (MEISI)</h3><p>EPSI · Stratégie du SI, management de projet agile, Big Data et BI, infrastructures virtualisées et cloud.</p></li>
+<li><time>2011 – 2012</time><h3>Licence professionnelle Systèmes, Réseaux et Sécurité</h3><p>ESGIS · Infrastructures, architectures réseaux et télécommunications, sauvegarde des données.</p></li>
+</ul>
+</div></section>
+
+<section id="bilan"><div class="wrap">
+<h2>Bilan &amp; Motivation</h2><p class="sub">Mon parcours en quelques mots.</p>
+<div class="bm">
+<div class="skill"><h3>Mon bilan</h3>
+<p>J’ai commencé en 2015 au support IT et digital d’UBA Bank, au contact quotidien des utilisateurs et des incidents. Cette base m’a appris ce qui fait vraiment fonctionner un système d’information.</p>
+<p>J’ai ensuite piloté 8 projets IT et digitaux, puis assuré la production du Core Banking FLEXCUBE de 3 filiales de NSIA Banque avec une équipe de 6 personnes. Mon alternance chez CFAO Group, en parallèle du Master, m’a fait passer à la maîtrise d’œuvre applicative.</p></div>
+<div class="skill"><h3>Ma motivation</h3>
+<p>Ce qui me motive, c’est de relier les besoins des métiers et la réalité technique pour livrer des projets utiles, dans les délais.</p>
+<p>Avec mon expérience du run et du build dans les environnements financiers, je veux prendre la responsabilité de projets SI de bout en bout : cadrage, pilotage, mise en production et accompagnement du changement.</p></div>
+</div></div></section>
 
 <section id="contact"><div class="wrap contact">
-<h2>Travaillons ensemble</h2><p class="sub">Je suis disponible à partir de [date]. Écrivez-moi, je réponds sous 48 h.</p>
-<p class="big"><a href="mailto:prenom.nom@email.com">prenom.nom@email.com</a></p>
-<div class="btns" style="margin:28px 0 0"><a class="btn main" href="#">LinkedIn</a><a class="btn" href="#">Télécharger mon CV</a></div>
+<h2>Travaillons ensemble</h2>
+<div class="cc">
+<p>Je suis disponible dès octobre 2026 en Île-de-France.<br>N’hésitez pas à me contacter pour discuter d’une opportunité.</p>
+<p id="merci" class="merci" role="status" hidden>Merci, votre message est bien envoyé. Je vous réponds rapidement.</p>
+<form class="cf" action="https://formsubmit.co/jeangerardhounkanrin@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="Nouveau message depuis mon portfolio">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="https://jeangerardhounkanrin.github.io/?envoye=1#contact">
+<input type="text" name="_honey" tabindex="-1" autocomplete="off" style="display:none">
+<label for="f-nom">Nom</label><input id="f-nom" name="name" type="text" autocomplete="name" required>
+<label for="f-mail">Email</label><input id="f-mail" name="email" type="email" autocomplete="email" required>
+<label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5" required></textarea>
+<button class="btn main" type="submit">Envoyer le message</button>
+</form>
+<p class="ou">Vous pouvez aussi me joindre directement :</p>
+<div class="cbtn">
+<a class="btn" href="mailto:jeangerardhounkanrin@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>jeangerardhounkanrin@gmail.com</a>
+<a class="btn" href="https://www.linkedin.com/in/VOTRE-PROFIL" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 5 2.5 2.5 0 01.01-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 6V21h-4v-5c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>LinkedIn</a>
+<a class="btn" href="https://github.com/jeangerardhounkanrin" target="_blank" rel="noopener">GitHub</a>
+</div></div>
 </div></section>
+<script>try{if(location.search.indexOf("envoye=1")>-1){var m=document.getElementById("merci");m.hidden=false}}catch(e){}</script>
 </main>
-<footer><div class="wrap">© [Année] Jean-Gérard Hounkanrin · Portfolio chef de projet SI</div></footer>
+<footer><div class="wrap">© 2026 Jean-Gérard Hounkanrin · Portfolio chef de projet SI</div></footer>
+<script>
+(function(){var el=document.getElementById("clock");if(!el)return;
+var d=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",weekday:"long",day:"numeric",month:"long",year:"numeric"});
+var h=new Intl.DateTimeFormat("fr-FR",{timeZone:"Europe/Paris",hour:"2-digit",minute:"2-digit",second:"2-digit"});
+function t(){var n=new Date();el.textContent=d.format(n)+" · "+h.format(n)+" (heure de Paris)"}
+t();setInterval(t,1000)})();
+</script>
 </body>
 </html>
