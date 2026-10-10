@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Jean-Gérard Hounkanrin · Chef de projet SI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F3F5F9;--surface:#fff;--ink:#101828;--mute:#5B6475;--line:#D9DEE8;--blue:#2B4EFF;--blue-soft:#E3E9FF;--amber:#F5A524;--bar2:#6F8BFF;--bar3:#9FB2FF;
+--d:"Bricolage Grotesque","Trebuchet MS",sans-serif;--b:"Instrument Sans","Segoe UI",Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0D1220;--surface:#151C30;--ink:#EEF1F8;--mute:#9AA4BA;--line:#27304A;--blue:#7F96FF;--blue-soft:#1C2750;--bar2:#4C66E0;--bar3:#33448F}}
+:root[data-theme="dark"]{--bg:#0D1220;--surface:#151C30;--ink:#EEF1F8;--mute:#9AA4BA;--line:#27304A;--blue:#7F96FF;--blue-soft:#1C2750;--bar2:#4C66E0;--bar3:#33448F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--b)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:60px;gap:16px}
+nav b{font:700 18px var(--d)}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:15px}
+nav a{text-decoration:none;color:var(--mute)}nav a:hover{color:var(--ink)}
+@media(max-width:640px){nav ul{display:none}}
+.hero{padding:72px 0 56px}
+h1{font:800 clamp(40px,7vw,76px)/1.02 var(--d);letter-spacing:-.03em;margin:0 0 20px;max-width:15ch}
+.lead{font-size:20px;color:var(--mute);max-width:56ch;margin:0 0 28px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:600;text-decoration:none;border:1.5px solid var(--ink)}
+.btn.main{background:var(--blue);border-color:var(--blue);color:#fff}
+:root[data-theme="dark"] .btn.main{color:#0D1220}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.main{color:#0D1220}}
+.gantt{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px 22px 14px;overflow-x:auto}
+.gantt-in{min-width:640px}
+.g-head,.g-row{display:grid;grid-template-columns:150px repeat(12,1fr);align-items:center}
+.g-head{font-size:13px;color:var(--mute);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.g-row{height:44px;border-bottom:1px dashed var(--line);font-size:15px;font-weight:500}
+.g-row:last-child{border:0}
+.bar{height:20px;border-radius:6px;background:var(--blue);transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both;animation-delay:var(--dl)}
+.bar.b2{background:var(--bar2)}.bar.b3{background:var(--bar3)}
+.ms{width:14px;height:14px;background:var(--amber);transform:rotate(45deg);justify-self:center;animation:pop .4s both;animation-delay:var(--dl)}
+@keyframes grow{from{transform:scaleX(0)}}
+@keyframes pop{from{transform:rotate(45deg) scale(0)}}
+.g-note{font-size:13px;color:var(--mute);margin:10px 0 0;display:flex;gap:18px;align-items:center}
+.g-note i{display:inline-block;width:10px;height:10px;background:var(--amber);transform:rotate(45deg);margin-right:8px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font:700 clamp(28px,4vw,40px)/1.1 var(--d);letter-spacing:-.02em;margin:0 0 12px}
+.sub{color:var(--mute);margin:0 0 36px;max-width:58ch}
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+@media(max-width:760px){.about{grid-template-columns:1fr;gap:28px}}
+.facts{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.facts li{padding-left:16px;border-left:3px solid var(--blue)}
+.facts b{display:block;font-family:var(--d)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px}
+.skill h3{font:700 20px var(--d);margin:0 0 14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0;padding:0;list-style:none}
+.tags li{background:var(--blue-soft);color:var(--ink);padding:5px 12px;border-radius:99px;font-size:14px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px;margin-bottom:20px;display:grid;grid-template-columns:1fr 1.2fr;gap:28px}
+@media(max-width:760px){.proj{grid-template-columns:1fr}}
+.proj h3{font:700 24px/1.2 var(--d);margin:0 0 6px}
+.meta{color:var(--mute);font-size:15px;margin:0 0 14px}
+.proj dl{margin:0;display:grid;gap:12px}
+.proj dt{font-weight:600;font-size:15px}
+.proj dd{margin:0;color:var(--mute);font-size:15.5px}
+.res{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.res span{border:1.5px solid var(--amber);border-radius:8px;padding:4px 10px;font-size:14px;font-weight:600}
+.tl{margin:0;padding:0;list-style:none;border-left:2px solid var(--line);margin-left:6px}
+.tl li{position:relative;padding:0 0 30px 28px}
+.tl li::before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;background:var(--blue);border-radius:50%;border:3px solid var(--bg)}
+.tl time{font-size:14px;color:var(--mute)}
+.tl h3{font:700 19px var(--d);margin:2px 0 4px}
+.tl p{margin:0;color:var(--mute)}
+.contact{text-align:left}
+.contact .big{font:800 clamp(28px,5vw,52px)/1.1 var(--d);letter-spacing:-.02em;word-break:break-word}
+.contact .big a{text-decoration-color:var(--blue);text-decoration-thickness:4px;text-underline-offset:6px}
+footer{padding:28px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+@media (prefers-reduced-motion:reduce){.bar,.ms{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Jean-Gérard Hounkanrin</b>
+<ul><li><a href="#apropos">À propos</a></li><li><a href="#competences">Compétences</a></li><li><a href="#projets">Projets</a></li><li><a href="#parcours">Parcours</a></li><li><a href="#contact">Contact</a></li></ul></div></nav>
+
+<main>
+<header class="hero"><div class="wrap">
+<h1>Je pilote les projets SI de la demande au déploiement.</h1>
+<p class="lead">Chef de projet SI, diplômé d’un Master Expert en informatique et systèmes d’information. Je fais le lien entre les métiers, les équipes techniques et les délais.</p>
+<div class="btns"><a class="btn main" href="#projets">Voir mes projets</a><a class="btn" href="#contact">Me contacter</a></div>
+
+<div class="gantt" role="img" aria-label="Exemple de planning de projet SI en cinq phases sur douze semaines">
+<div class="gantt-in">
+<div class="g-head"><span>Un projet type</span><span>S1</span><span></span><span></span><span>S4</span><span></span><span></span><span>S7</span><span></span><span></span><span>S10</span><span></span><span>S12</span></div>
+<div class="g-row"><span>Cadrage</span><div class="bar" style="grid-column:2/5;--dl:.1s"></div></div>
+<div class="g-row"><span>Conception</span><div class="bar b2" style="grid-column:4/8;--dl:.35s"></div></div>
+<div class="g-row"><span>Développement</span><div class="bar" style="grid-column:6/11;--dl:.6s"></div></div>
+<div class="g-row"><span>Recette</span><div class="bar b3" style="grid-column:10/13;--dl:.85s"></div></div>
+<div class="g-row"><span>Mise en production</span><div class="ms" style="grid-column:13;--dl:1.3s"></div></div>
+</div>
+<p class="g-note"><span><i></i>Jalon : go-live</span><span>Méthode adaptée au contexte : cycle en V ou agile</span></p>
+</div>
+</div></header>
+
+<section id="apropos"><div class="wrap about">
+<div><h2>À propos</h2>
+<p>Je suis Jean-Gérard Hounkanrin, tout juste diplômé(e) d’un Master Expert en informatique et systèmes d’information à [École / Université]. Ma formation m’a donné une base technique solide (architecture, données, sécurité) et une vision de gestion de projet de bout en bout.</p>
+<p>Je cherche mon premier poste de chef de projet SI, dans une équipe où je peux coordonner, structurer et livrer des projets qui servent vraiment les utilisateurs.</p></div>
+<ul class="facts"><li><b>Diplôme</b>Master Expert informatique et systèmes d’information, [année]</li><li><b>Poste visé</b>Chef de projet SI, [CDI / alternance]</li><li><b>Mobilité</b>[Ville / Île-de-France / télétravail]</li><li><b>Langues</b>Français, anglais [niveau]</li></ul>
+</div></section>
+
+<section id="competences"><div class="wrap">
+<h2>Compétences</h2><p class="sub">Trois domaines qui couvrent la vie d’un projet SI.</p>
+<div class="skills">
+<div class="skill"><h3>Pilotage de projet</h3><ul class="tags"><li>Cadrage et expression de besoin</li><li>Planning et budget</li><li>Gestion des risques</li><li>Agile / Scrum</li><li>Cycle en V</li><li>Comités de pilotage</li><li>Recette et conduite du changement</li></ul></div>
+<div class="skill"><h3>Systèmes d’information</h3><ul class="tags"><li>Urbanisation du SI</li><li>Cahier des charges</li><li>UML / BPMN</li><li>ERP / CRM</li><li>ITIL</li><li>Gouvernance et RGPD</li><li>Cybersécurité</li></ul></div>
+<div class="skill"><h3>Technique et outils</h3><ul class="tags"><li>SQL et bases de données</li><li>Python</li><li>Power BI</li><li>Cloud [Azure / AWS]</li><li>Jira, Confluence</li><li>MS Project</li><li>Git</li></ul></div>
+</div></div></section>
+
+<section id="projets"><div class="wrap">
+<h2>Projets</h2><p class="sub">Chaque projet suit la même logique : le contexte, mon rôle, la méthode, le résultat.</p>
+
+<article class="proj"><div><h3>[Nom du projet 1]</h3><p class="meta">Projet de Master · [durée] · équipe de [n] personnes</p><ul class="tags"><li>Scrum</li><li>Jira</li><li>[Techno]</li></ul></div>
+<dl><dt>Contexte</dt><dd>[Décrivez le besoin : quelle organisation, quel problème à résoudre.]</dd><dt>Mon rôle</dt><dd>Chef de projet : cadrage, planning, animation des sprints, suivi des risques.</dd><dt>Résultat</dt><dd><div class="res"><span>[−30 % de temps de traitement]</span><span>[Livré dans les délais]</span></div></dd></dl></article>
+
+<article class="proj"><div><h3>[Nom du projet 2]</h3><p class="meta">Stage chez [Entreprise] · [durée]</p><ul class="tags"><li>Cycle en V</li><li>MS Project</li><li>[Techno]</li></ul></div>
+<dl><dt>Contexte</dt><dd>[Migration, refonte, déploiement d’un outil : précisez le périmètre.]</dd><dt>Mon rôle</dt><dd>[Assistant chef de projet : rédaction des spécifications, plan de tests, reporting hebdomadaire.]</dd><dt>Résultat</dt><dd><div class="res"><span>[n utilisateurs formés]</span><span>[Budget respecté]</span></div></dd></dl></article>
+
+<article class="proj"><div><h3>[Nom du projet 3]</h3><p class="meta">Mémoire ou projet personnel · [année]</p><ul class="tags"><li>Power BI</li><li>SQL</li><li>[Techno]</li></ul></div>
+<dl><dt>Contexte</dt><dd>[Un tableau de bord, une étude d’urbanisation ou un audit SI.]</dd><dt>Mon rôle</dt><dd>[Analyse du besoin, modélisation, conception de la solution.]</dd><dt>Résultat</dt><dd><div class="res"><span>[Indicateur clé]</span></div></dd></dl></article>
+</div></section>
+
+<section id="parcours"><div class="wrap">
+<h2>Parcours</h2><p class="sub">Formation et expériences, du plus récent au plus ancien.</p>
+<ul class="tl">
+<li><time>[2024 – 2026]</time><h3>Master Expert informatique et systèmes d’information</h3><p>[École / Université] · Spécialité [x]. Mémoire sur [sujet].</p></li>
+<li><time>[2025 – 2026]</time><h3>Alternance ou stage : [Poste] chez [Entreprise]</h3><p>[Une phrase sur vos missions et vos résultats.]</p></li>
+<li><time>[2021 – 2024]</time><h3>Licence / Bachelor [intitulé]</h3><p>[École / Université]</p></li>
+<li><time>[Année]</time><h3>Certifications</h3><p>[PMP / PRINCE2 / Scrum Master / ITIL 4 / TOEIC : à compléter]</p></li>
+</ul></div></section>
+
+<section id="contact"><div class="wrap contact">
+<h2>Travaillons ensemble</h2><p class="sub">Je suis disponible à partir de [date]. Écrivez-moi, je réponds sous 48 h.</p>
+<p class="big"><a href="mailto:prenom.nom@email.com">prenom.nom@email.com</a></p>
+<div class="btns" style="margin:28px 0 0"><a class="btn main" href="#">LinkedIn</a><a class="btn" href="#">Télécharger mon CV</a></div>
+</div></section>
+</main>
+<footer><div class="wrap">© [Année] Jean-Gérard Hounkanrin · Portfolio chef de projet SI</div></footer>
+</body>
+</html>
